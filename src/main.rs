@@ -26,7 +26,8 @@ fn main() {
 
             while amount_of_guesses < 5 {
                 amount_of_guesses += 1;
-                println!("\nAttempt {}/5", amount_of_guesses);
+               let remaining_attempts = 5 - amount_of_guesses + 1;
+                println!("\nAttempt {}/5 | Remaining attempts: {}", amount_of_guesses, remaining_attempts);
                 let input = read_input("Enter your guess: ");
 
                 match input.parse::<u32>() {
